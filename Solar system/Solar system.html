@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        img{
+            border-radius: 8px;
+            border: 2px solid white;
+            box-shadow: 10px 10px 6px grey;
+            animation: slideFromBottom 1s ease-in-out;
+            
+        }
+        #mainBody{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #Text{
+            color: white;
+            animation: slideFromTop 1s ease-in-out;
+        }
+        @keyframes slideFromTop {
+            0%{
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes slideFromBottom {
+            0%{
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes slideFromLeft {
+            0%{
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mainBody">
+        <div id="Text">
+            <h1><i>SOLAR SYSTEM</i></h1>
+        </div>
+        <div id="Img">
+            <img src="solar system.jpeg.jpg"   alt="Solar Sytem" usemap="#planetmap">
+            <map name="planetmap">
+
+                <area shape="circle" coords="116,706,90" href="sun.jpg" alt="Sun">
+                <area shape="rect" coords="206,579,246,612" href="mercury.jpg" alt="Mercury">
+                <area shape="rect" coords="237,518,305,576" href="venus.jpg" alt="Venus">
+                <area shape="circle" coords="331,491,38" href="earth.jpg" alt="Earth">
+                <area shape="rect" coords="425,459,359,400" href="mars.jpg" alt="Mars">
+                <area shape="rect" coords="411,286,543,399" href="jupiter.jpg" alt="Jupiter">
+                <area shape="rect" coords="482,192,666,282" href="saturn.jpg" alt="Saturn">
+                <area shape="rect" coords="624,116,706,194" href="uranus.jpg" alt="Uranus">
+                <area shape="rect" coords="699,56,763,117" href="neptune.jpg" alt="Neptune">
+                <area shape="rect" coords="770,17,805,50" href="pluto.jpg" alt="Pluto">
+            </map>
+        </div>
+    </div>
+</body>
+</html>
